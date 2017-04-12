@@ -29,11 +29,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *   |RESET |Hyper | Meh  |AltSpc|LANG1 |                                       |LANG2 | Left | Down |  Up  | Right |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,---------------.
- *                                        | LAlt | LGui |       | RAlt |Ctrl/Esc|
+ *                                        | LAlt | LGui |       | RAlt |  Esc   |
  *                                 ,------|------|------|       |------+--------+------.
  *                                 |      |      | Home |       | PgUp |        |      |
- *                                 | Enter| LGui |------|       |------|  RGui  |Space |
- *                                 |      |      |CtlGui|       |CtlGui|        |      |
+ *                                 |Enter/| Esc/ |------|       |------|  Esc/  |Space/|
+ *                                 |LCtrl | LGui |CtlGui|       |CtlGui|  RGui  |RCtrl |
  *                                 `--------------------'       `----------------------'
  */
 // If it accepts an argument (i.e, is a function), it doesn't need KC_.
@@ -47,7 +47,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         RESET,          ALL_T(KC_NO), MEH_T(KC_NO),LALT(KC_SPC),KC_LANG1,
                                                       KC_LALT,KC_LGUI,
                                                               KC_HOME,
-                                          KC_ENT,KC_LGUI,LGUI(KC_LCTL),
+                          LCTL_T(KC_ENT),LGUI_T(KC_ESC),LGUI(KC_LCTL),
         // right hand
              KC_GRV,      KC_6,   KC_7,  KC_8,   KC_9,   KC_0,             KC_MINS,
              TG(SYMB),    KC_Y,   KC_U,  KC_I,   KC_O,   KC_P,             KC_BSLS,
@@ -56,7 +56,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                            KC_LANG2, KC_LEFT,KC_DOWN,KC_UP,KC_RIGHT,
         KC_RALT, KC_ESC,
         KC_PGUP,
-        RGUI(KC_RCTL),KC_RGUI, KC_SPC
+        RGUI(KC_RCTL),RGUI_T(KC_ESC), RCTL_T(KC_SPC)
     ),
 /* Keymap 1: Symbol Layer
  *

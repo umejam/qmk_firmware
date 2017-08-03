@@ -18,10 +18,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Keymap 0: Basic layer
  *
  * ,--------------------------------------------------.           ,--------------------------------------------------.
- * |   ESC  |   1  |   2  |   3  |   4  |   5  | `    |           |  -   |   6  |   7  |   8  |   9  |   0  | BkSpc  |
+ * |  ESC   |   1  |   2  |   3  |   4  |   5  | `    |           |  -   |   6  |   7  |   8  |   9  |   0  | BkSpc  |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
- * | Tab    |   Q  |   W  |   E  |   R  |   T  |  [   |           | CAPS |   Y  |   U  |   I  |   O  |   P  |   =    |
- * |--------+------+------+------+------+------|      |           | Lock |------+------+------+------+------+--------|
+ * |  Tab   |   Q  |   W  |   E  |   R  |   T  |  [   |           | Alt  |   Y  |   U  |   I  |   O  |   P  |   =    |
+ * |--------+------+------+------+------+------|      |           | Spc  |------+------+------+------+------+--------|
  * |   \    |   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |  ;   |   '    |
  * |--------+------+------+------+------+------|  ]   |           | ESC  |------+------+------+------+------+--------|
  * | LShift |   Z  |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   ,  |   .  |  /   | RShift |
@@ -33,7 +33,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                                 ,------|------|------|       |------+--------+------.
  *                                 |      |      | RESET|       | L2   |        |      |
  *                                 |Space/|Enter/|------|       |------| Enter/ |Space/|
- *                                 |LCtrl | LGui |AltSpc|       | L1   |  RGui  |RCtrl |
+ *                                 |LCtrl | LGui | CAPS |       | L1   |  RGui  |RCtrl |
  *                                 `--------------------'       `----------------------'
  */
 // If it accepts an argument (i.e, is a function), it doesn't need KC_.
@@ -47,10 +47,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_HOME,        ALL_T(KC_NO), MEH_T(KC_NO),LGUI(KC_LCTL),KC_LANG2,
                                                              KC_LALT,KC_LGUI,
                                                                        RESET,
-                    		      LCTL_T(KC_SPC),LGUI_T(KC_ENT),LALT(KC_SPC),
+                     		           LCTL_T(KC_SPC),LGUI_T(KC_ENT),KC_CAPS,
         // right hand
         KC_MINS,     KC_6,   KC_7,  KC_8,   KC_9,   KC_0,             KC_BSPC,
-        KC_CAPS,     KC_Y,   KC_U,  KC_I,   KC_O,   KC_P,             KC_EQL,
+        LALT(KC_SPC),KC_Y,   KC_U,  KC_I,   KC_O,   KC_P,             KC_EQL,
                      KC_H,   KC_J,  KC_K,   KC_L,   KC_SCLN,          KC_QUOT,
         KC_ESC,      KC_N,   KC_M,  KC_COMM,KC_DOT, KC_SLSH,          KC_RSFT,
                                      KC_LANG1, KC_LEFT,KC_DOWN,KC_UP,KC_RIGHT,

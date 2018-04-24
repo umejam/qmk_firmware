@@ -18,7 +18,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Keymap 0: Basic layer
  *
  * ,--------------------------------------------------.           ,--------------------------------------------------.
- * |  漢字  |   1  |   2  |   3  |   4  |   5  |  ESC |            |Alt/Sp|   6  |   7  |   8  |   9  |   0  | BkSp   |
+ * |  ESC   |   1  |   2  |   3  |   4  |   5  | 漢字 |            |Alt/Sp|   6  |   7  |   8  |   9  |   0  | BkSp   |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
  * |  Tab   |   Q  |   W  |   E  |   R  |   T  | `    |           |  -   |   Y  |   U  |   I  |   O  |   P  |   =    |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
@@ -40,7 +40,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // Otherwise, it needs KC_*
 [BASE] = KEYMAP(  // layer 0 : default
         // left hand
-		LGUI(KC_GRV),   KC_1,       KC_2,    KC_3,         KC_4,    KC_5,   KC_ESC,
+	KC_ESC,         KC_1,       KC_2,    KC_3,         KC_4,    KC_5,   LALT(KC_GRV),
         KC_TAB,         KC_Q,       KC_W,    KC_E,         KC_R,    KC_T,   KC_GRV,
         KC_BSLS,        KC_A,       KC_S,    KC_D,         KC_F,    KC_G,
         KC_LSFT,        KC_Z,       KC_X,    KC_C,         KC_V,    KC_B,   KC_LBRC,

@@ -18,7 +18,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Keymap 0: Basic layer
  *
  * ,--------------------------------------------------.           ,--------------------------------------------------.
- * |  ESC   |   1  |   2  |   3  |   4  |   5  | 漢字 |            |Alt/Sp|   6  |   7  |   8  |   9  |   0  | BkSp   |
+ * |  ESC   |   1  |   2  |   3  |   4  |   5  |   /  |           |Alt/Sp|   6  |   7  |   8  |   9  |   0  | BkSp   |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
  * |  Tab   |   Q  |   W  |   E  |   R  |   T  | `    |           |  -   |   Y  |   U  |   I  |   O  |   P  |   =    |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
@@ -26,39 +26,39 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------|  [   |           |   ]  |------+------+------+------+------+--------|
  * | Shift  |   Z  |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   ,  |   .  |  Up  | Shift  |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   |  /   |  L2  |  L1  | Home |LANG2 |                                       |LANG1 |CtlGui| Left | Down | Right |
+ *   | 漢字  |  L2  |  L1  | LAlt |LANG2 |                                       |LANG1 | RAlt | Left | Down | Right |
  *   `----------------------------------'                                       `-----------------------------------'
  *                                        ,-------------.       ,---------------.
  *                                        | CAPS |RESET |       |  Meh | Hyper  |
  *                                 ,------|------|------|       |------+--------+------.
  *                                 |      |      | LGui |       | RGui |        |      |
  *                                 |Space/|Enter/|------|       |------| Enter/ |Space/|
- *                                 |LCtrl | LGui | LAlt |       | RAlt |  RGui  |RCtrl |
+ *                                 |LCtrl | LGui | Home |       |CtlGui|  RGui  |RCtrl |
  *                                 `--------------------'       `----------------------'
  */
 // If it accepts an argument (i.e, is a function), it doesn't need KC_.
 // Otherwise, it needs KC_*
 [BASE] = LAYOUT_ergodox(  // layer 0 : default
         // left hand
-	KC_ESC,         KC_1,       KC_2,    KC_3,         KC_4,    KC_5,   LALT(KC_GRV),
+	KC_ESC,         KC_1,       KC_2,    KC_3,         KC_4,    KC_5,   KC_SLSH,
         KC_TAB,         KC_Q,       KC_W,    KC_E,         KC_R,    KC_T,   KC_GRV,
         KC_BSLS,        KC_A,       KC_S,    KC_D,         KC_F,    KC_G,
         KC_LSFT,        KC_Z,       KC_X,    KC_C,         KC_V,    KC_B,   KC_LBRC,
-        KC_SLSH,        TG(MDIA),   TG(SYMB),KC_HOME,      KC_LANG2,
+        LALT(KC_GRV),   TG(MDIA),   TG(SYMB),KC_LALT,      KC_LANG2,
 
 		                                                    KC_CAPS, RESET,
                                                                              KC_LGUI,
-		                              LCTL_T(KC_SPC),LGUI_T(KC_ENT), KC_LALT,
+		                              LCTL_T(KC_SPC),LGUI_T(KC_ENT), KC_HOME,
         // right hand
         LALT(KC_SPC), KC_6,   KC_7,     KC_8,         KC_9,   KC_0,        KC_BSPC,
         KC_MINS,      KC_Y,   KC_U,     KC_I,         KC_O,   KC_P,        KC_EQL,
                       KC_H,   KC_J,     KC_K,         KC_L,   KC_SCLN,     KC_QUOT,
         KC_RBRC,      KC_N,   KC_M,     KC_COMM,      KC_DOT, KC_UP,       KC_RSFT,
-	                      KC_LANG1, RGUI(KC_RCTL),KC_LEFT,KC_DOWN,     KC_RIGHT,
+	                      KC_LANG1, KC_RALT,      KC_LEFT,KC_DOWN,     KC_RIGHT,
 
         MEH_T(KC_NO),ALL_T(KC_NO),
         KC_RGUI,
-        KC_RALT,RGUI_T(KC_ENT),RCTL_T(KC_SPC)
+        RGUI(KC_RCTL),RGUI_T(KC_ENT),RCTL_T(KC_SPC)
     ),
 /* Keymap 1: Symbol Layer
  *

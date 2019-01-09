@@ -26,7 +26,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------|  [   |           |   ]  |------+------+------+------+------+--------|
  * | Shift  |   Z  |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   ,  |   .  |  Up  | Shift  |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   | 漢字  |  L2  |  L1  |LANG2 | LAlt |                                       |RAlt  |LANG1 | Left | Down | Right |
+ *   |  L2  |  L1  | 漢字 | LANG2 | LAlt |                                       |RAlt  |LANG1 | Left | Down | Right |
  *   `----------------------------------'                                       `-----------------------------------'
  *                                        ,-------------.       ,---------------.
  *                                        | CAPS |RESET |       |  Meh | Hyper  |
@@ -44,7 +44,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TAB,         KC_Q,       KC_W,    KC_E,         KC_R,    KC_T,   KC_GRV,
         KC_SLSH,        KC_A,       KC_S,    KC_D,         KC_F,    KC_G,
         KC_LSFT,        KC_Z,       KC_X,    KC_C,         KC_V,    KC_B,   KC_LBRC,
-        LALT(KC_GRV),   TG(MDIA),   TG(SYMB),KC_LANG2,     KC_LALT,
+        TG(MDIA),       TG(SYMB),   LALT(KC_GRV),KC_LANG2, KC_LALT,
 
 		                                                    KC_CAPS, RESET,
                                                                              KC_HOME,

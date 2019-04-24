@@ -26,7 +26,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------|  [   |           |   ]  |------+------+------+------+------+--------|
  * | Shift  |   Z  |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   ,  |   .  |  Up  | Shift  |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   |  L2  |  L1  | 漢字 | LANG2 | Space|                                       |Enter |LANG1 | Left | Down | Right |
+ *   |  L2  |  L1  |ENTER | LANG2 | SPC  |                                       | SPC  |LANG1 | Left | Down | Right |
  *   `----------------------------------'                                       `-----------------------------------'
  *                                        ,-------------.       ,---------------.
  *                                        | CAPS |RESET |       |  Meh | Hyper  |
@@ -44,7 +44,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TAB,         KC_Q,       KC_W,    KC_E,         KC_R,    KC_T,   KC_GRV,
         KC_SLSH,        KC_A,       KC_S,    KC_D,         KC_F,    KC_G,
         KC_LSFT,        KC_Z,       KC_X,    KC_C,         KC_V,    KC_B,   KC_LBRC,
-        TG(MDIA),       TG(SYMB),   LALT(KC_GRV),KC_LANG2, KC_SPC,
+        TG(MDIA),       TG(SYMB),   KC_ENT,  KC_LANG2,     KC_SPC,
 
 		                                                    KC_CAPS, RESET,
                                                                              KC_HOME,
@@ -54,7 +54,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_MINS,      KC_Y,   KC_U,     KC_I,         KC_O,   KC_P,        KC_EQL,
                       KC_H,   KC_J,     KC_K,         KC_L,   KC_SCLN,     KC_QUOT,
         KC_RBRC,      KC_N,   KC_M,     KC_COMM,      KC_DOT, KC_UP,       KC_RSFT,
-	                      KC_ENT,   KC_LANG1,     KC_LEFT,KC_DOWN,     KC_RIGHT,
+	                      KC_SPC,   KC_LANG1,     KC_LEFT,KC_DOWN,     KC_RIGHT,
 
         MEH_T(KC_NO),ALL_T(KC_NO),
         KC_RGUI,

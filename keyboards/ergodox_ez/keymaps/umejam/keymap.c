@@ -18,7 +18,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Keymap 0: Basic layer
  *
  * ,--------------------------------------------------.           ,--------------------------------------------------.
- * |  ESC   |   1  |   2  |   3  |   4  |   5  |   \  |           |Alt/Sp|   6  |   7  |   8  |   9  |   0  | BkSp   |
+ * |  ESC   |   1  |   2  |   3  |   4  |   5  |   \  |           |Enter |   6  |   7  |   8  |   9  |   0  | BkSp   |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
  * |  Tab   |   Q  |   W  |   E  |   R  |   T  | `    |           |  -   |   Y  |   U  |   I  |   O  |   P  |   =    |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
@@ -26,7 +26,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------|  [   |           |   ]  |------+------+------+------+------+--------|
  * | Shift  |   Z  |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   ,  |   .  |  Up  | Shift  |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   |  L2  |  L1  |ENTER | LANG2 | SPC  |                                       | SPC  |LANG1 | Left | Down | Right |
+ *   |  L2  |  L1  |Alt/Sp| LANG2 | SPC  |                                       | SPC  |LANG1 | Left | Down | Right |
  *   `----------------------------------'                                       `-----------------------------------'
  *                                        ,-------------.       ,---------------.
  *                                        | CAPS |RESET |       |  Meh | Hyper  |
@@ -44,13 +44,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TAB,         KC_Q,       KC_W,    KC_E,         KC_R,    KC_T,   KC_GRV,
         KC_SLSH,        KC_A,       KC_S,    KC_D,         KC_F,    KC_G,
         KC_LSFT,        KC_Z,       KC_X,    KC_C,         KC_V,    KC_B,   KC_LBRC,
-        TG(MDIA),       TG(SYMB),   KC_ENT,  KC_LANG2,     KC_SPC,
+        TG(MDIA),       TG(SYMB),   LALT(KC_SPC),KC_LANG2, KC_SPC,
 
 		                                                    KC_CAPS, RESET,
                                                                              KC_HOME,
 		                                           KC_LCTL, KC_LGUI, KC_LALT,
         // right hand
-        LALT(KC_SPC), KC_6,   KC_7,     KC_8,         KC_9,   KC_0,        KC_BSPC,
+        KC_ENT,       KC_6,   KC_7,     KC_8,         KC_9,   KC_0,        KC_BSPC,
         KC_MINS,      KC_Y,   KC_U,     KC_I,         KC_O,   KC_P,        KC_EQL,
                       KC_H,   KC_J,     KC_K,         KC_L,   KC_SCLN,     KC_QUOT,
         KC_RBRC,      KC_N,   KC_M,     KC_COMM,      KC_DOT, KC_UP,       KC_RSFT,

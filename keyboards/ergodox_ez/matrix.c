@@ -126,6 +126,9 @@ uint8_t matrix_scan(void) {
       } else {
         print("left side attached\n");
         ergodox_blink_all_leds();
+#ifdef RGB_MATRIX_ENABLE
+        rgb_matrix_init(); // re-init driver on reconnect
+#endif
       }
     }
   }
@@ -209,10 +212,8 @@ static matrix_row_t read_cols(uint8_t row) {
       return 0;
     } else {
       uint8_t data    = 0;
-      mcp23018_status = i2c_start(I2C_ADDR_WRITE, ERGODOX_EZ_I2C_TIMEOUT);
-      if (mcp23018_status) goto out;
-      mcp23018_status = i2c_write(GPIOB, ERGODOX_EZ_I2C_TIMEOUT);
-      if (mcp23018_status) goto out;
+      // reading GPIOB (column port) since in mcp23018's sequential mode
+      // it is addressed directly after writing to GPIOA in select_row()
       mcp23018_status = i2c_start(I2C_ADDR_READ, ERGODOX_EZ_I2C_TIMEOUT);
       if (mcp23018_status) goto out;
       mcp23018_status = i2c_read_nack(ERGODOX_EZ_I2C_TIMEOUT);

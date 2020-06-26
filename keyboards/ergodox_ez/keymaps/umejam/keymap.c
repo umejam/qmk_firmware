@@ -76,9 +76,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                                        ,-------------.       ,-------------.
  *                                        |Animat|Toggle|       |Brght-|Brght+|
  *                                 ,------|------|------|       |------+------+------.
- *                                 |      |      |Solid |       |      |Hue-  |Hue+  |
+ *                                 |      |      |Solid |       | Hue+ |      |      |
  *                                 |      |      |------|       |------|      |      |
- *                                 |      |      |      |       |      |      |      |
+ *                                 |      |      |      |       | Hue- |      |      |
  *                                 `--------------------'       `--------------------'
  */
 // SYMBOLS
@@ -96,13 +96,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        // right hand
        KC_TRNS, KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_TRNS,
        KC_TRNS, KC_7,    KC_8,    KC_9,    KC_ASTR, KC_AMPR, KC_F11,
-	              KC_4,    KC_5,    KC_6,    KC_PLUS, KC_BSLS, KC_F12,
-       KC_0,    KC_1,    KC_2,    KC_3,    KC_UP,   KC_EQL,   KC_TRNS,
-	                       KC_DOT,  KC_LEFT, KC_DOWN, KC_RIGHT,KC_TRNS,
+                KC_4,    KC_5,    KC_6,    KC_PLUS, KC_BSLS, KC_F12,
+       KC_0,    KC_1,    KC_2,    KC_3,    KC_UP,   KC_EQL,  KC_TRNS,
+	                     KC_DOT,  KC_LEFT, KC_DOWN, KC_RIGHT,KC_TRNS,
 
        RGB_VAD,RGB_VAI,
-       KC_TRNS,
-       KC_TRNS, RGB_HUD, RGB_HUI
+       RGB_HUI,
+       RGB_HUD, KC_TRNS, KC_TRNS
 ),
 /* Keymap 2: Media and mouse keys
  *

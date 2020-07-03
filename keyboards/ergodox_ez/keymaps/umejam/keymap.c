@@ -33,7 +33,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                                 ,------|------|------|       |------+--------+------.
  *                                 |      |      | Home |       | PrSc |        |      |
  *                                 |Enter/|      |------|       |------|        |Enter/|
- *                                 |LCtrl | LGui | Enter |      | Enter|  RGui  |RCtrl |
+ *                                 |LCtrl | LGui |Ctrl+[|       |Ctrl+[|  RGui  |RCtrl |
  *                                 `--------------------'       `----------------------'
  */
 // If it accepts an argument (i.e, is a function), it doesn't need KC_.
@@ -46,9 +46,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_LSFT,        KC_Z,       KC_X,    KC_C,         KC_V,    KC_B,   KC_RBRC,
         TG(MDIA),       KC_LALT,    LALT(KC_X),KC_LANG2,   KC_SPC,
 
- 		                                                            KC_CAPS,RESET,
+ 		                                                              KC_CAPS,RESET,
                                                                             KC_HOME,
-	                                                   CTL_T(KC_ENT),KC_LGUI,KC_ENT,
+	                                             CTL_T(KC_ENT),KC_LGUI,LCTL(KC_LBRC),
         // right hand
         RALT(KC_SPC), KC_6,   KC_7,     KC_8,         KC_9,   KC_0,        KC_BSPC,
         KC_MINS,      KC_Y,   KC_U,     KC_I,         KC_O,   KC_P,        KC_EQL,
@@ -58,7 +58,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
         MEH_T(KC_NO),ALL_T(KC_NO),
         KC_PSCR,
-        KC_ENT,KC_RGUI,CTL_T(KC_ENT)
+        RCTL(KC_LBRC),KC_RGUI,CTL_T(KC_ENT)
     ),
 /* Keymap 1: Symbol Layer
  *

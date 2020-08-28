@@ -1,3 +1,3 @@
 #!/bin/sh
 
-make ergodox_ez:umejam && wally-cli ergodox_ez_umejam.hex
+make $1:umejam && wally-cli ergodox_ez_umejam.hex
